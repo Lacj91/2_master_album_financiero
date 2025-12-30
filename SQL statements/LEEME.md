@@ -4,6 +4,8 @@
 
 Las bases de datos se crearon inicialmente para establecer límites claros de dominio a lo largo del proyecto. Una vez definido el esquema analítico final y la estrategia de ingesta de datos, se implementaron las definiciones de tablas.
 
+La información detallada usada en los documentos sobre el ds\_id asignado, las columnas creadas en SQL y su uso en Power BI se encuentra en el documento de Excel generated\_tables.xls.
+
 
 
 ### 1\. Base de Datos y Fundamentos
