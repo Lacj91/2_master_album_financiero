@@ -66,6 +66,7 @@ WITH NO DATA;
 --
 CREATE MATERIALIZED VIEW album_financiero.ds_viaje_tipo_cambio AS
 SELECT id,
+id_viaje,
 moneda,
 tipo_cambio
 FROM album_financiero.v_ds_viaje_tipo_cambio

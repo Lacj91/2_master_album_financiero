@@ -146,3 +146,14 @@ FROM album_financiero.ds_inversiones_movimientos;
 
 CREATE UNIQUE INDEX idx_dim_inversiones_movimientos_pk
 ON album_financiero.dim_inversiones_movimientos (tipo_inversion_detectado);
+
+
+
+--CSV035  dim_tipo_cambio_moneda
+CREATE MATERIALIZED VIEW album_financiero.dim_tipo_cambio_moneda AS
+SELECT DISTINCT moneda
+FROM album_financiero.v_ds_viaje_tipo_cambio
+ORDER BY moneda ASC;
+
+CREATE UNIQUE INDEX pk_dim_ingresos
+ON album_financiero.dim_tipo_cambio_monedas (moneda);

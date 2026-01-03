@@ -1,10 +1,10 @@
-# SQL statements
+# SQL scripts
 
 
 
 Databases were initially created to establish clear domain boundaries across the project, while table definitions were implemented later once the final analytical schema and ingestion strategy were defined.
 
-Detailed information about the assigned ds\_id in the document, SQL-created columns, and Power BI usage can be found in the generated\_tables.xls Excel document.
+Detailed information about the assigned ds\_id in the document, SQL-created columns, and Power BI usage can be found in the generated\_tables.xls document.
 
 
 
