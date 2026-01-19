@@ -60,7 +60,7 @@ LEFT JOIN LATERAL (                                             -- 🔹 This is 
     ORDER BY dtc.fecha DESC
     LIMIT 1
 ) AS dtc ON TRUE
-WHERE dg.moneda <> 'Peso Mexicano'
+WHERE dg.moneda <> 'Peso Chileno'
 WITH NO DATA;
 
 --

@@ -1,0 +1,965 @@
+"id","categoria_ingreso","tipo_ingreso","canal_ingreso"
+A000001,Ingreso,Ingreso,INGRESO8
+A000002,Ingreso,Ingreso,INGRESO6
+A000004,Egreso,Ahorro,INGRESO8
+A000005,Ingreso,Ingreso,INGRESO7
+A000006,Ingreso,Ahorro,INGRESO9
+A000021,Ingreso,Ingreso,INGRESO7
+A000023,Ingreso,Ingreso,INGRESO2
+A000024,Ingreso,Ingreso,INGRESO1
+A000025,Ingreso,Ingreso,INGRESO7
+A000030,Ingreso,Ingreso,INGRESO8
+A000040,Ingreso,Ingreso,INGRESO9
+A000042,Ingreso,Ingreso,INGRESO10
+A000044,Ingreso,Ingreso,INGRESO7
+A000049,Egreso,Ahorro,INGRESO4
+A000050,Egreso,Ahorro,INGRESO5
+A000052,Ingreso,Ingreso,INGRESO3
+A000053,Ingreso,Ingreso,INGRESO4
+A000055,Ingreso,Ingreso,INGRESO5
+A000056,Ingreso,Ingreso,INGRESO6
+A000057,Ingreso,Ingreso,INGRESO8
+A000061,Ingreso,Ahorro,INGRESO10
+A000062,Egreso,Ahorro,INGRESO1
+A000066,Ingreso,Ingreso,INGRESO1
+A000067,Ingreso,Ingreso,INGRESO2
+A000068,Egreso,Ahorro,INGRESO6
+A000069,Ingreso,Ingreso,INGRESO4
+A000070,Ingreso,Ingreso,INGRESO5
+A000071,Ingreso,Ingreso,INGRESO6
+A000074,Ingreso,Ingreso,INGRESO8
+A000076,Ingreso,Ingreso,INGRESO8
+A000077,Ingreso,Ingreso,INGRESO9
+A000078,Ingreso,Ingreso,INGRESO5
+A000079,Ingreso,Ingreso,INGRESO6
+A000080,Ingreso,Ingreso,INGRESO7
+A000086,Egreso,Ahorro,INGRESO7
+A000088,Ingreso,Ingreso,INGRESO8
+A000091,Ingreso,Ingreso,INGRESO9
+A000093,Ingreso,Ingreso,INGRESO10
+A000095,Ingreso,Ingreso,INGRESO1
+A000097,Ingreso,Ingreso,INGRESO3
+A000111,Ingreso,Ingreso,INGRESO4
+A000112,Ingreso,Ingreso,INGRESO9
+A000114,Ingreso,Ingreso,INGRESO5
+A000115,Ingreso,Ingreso,INGRESO6
+A000116,Ingreso,Ingreso,INGRESO7
+A000118,Ingreso,Ingreso,INGRESO8
+A000127,Egreso,Ahorro,INGRESO8
+A000128,Egreso,Ahorro,INGRESO9
+A000129,Egreso,Ahorro,INGRESO10
+A000130,Ingreso,Ingreso,INGRESO9
+A000131,Ingreso,Ingreso,INGRESO10
+A000133,Ingreso,Ingreso,INGRESO2
+A000138,Ingreso,Ingreso,INGRESO3
+A000139,Ingreso,Ingreso,INGRESO4
+A000145,Ingreso,Ingreso,INGRESO5
+A000148,Ingreso,Ingreso,INGRESO10
+A000149,Ingreso,Ingreso,INGRESO6
+A000153,Ingreso,Ahorro,INGRESO2
+A000154,Egreso,Ahorro,INGRESO3
+A000160,Egreso,Ahorro,INGRESO1
+A000161,Egreso,Ahorro,INGRESO2
+A000163,Ingreso,Ingreso,INGRESO1
+A000191,Ingreso,Ingreso,INGRESO2
+A000194,Egreso,Actividad Comercial,Actividad Economica
+A000221,Ingreso,Ahorro,INGRESO1
+A000230,Ingreso,Ingreso,INGRESO3
+A000233,Ingreso,Ahorro,INGRESO2
+A000234,Egreso,Ahorro,INGRESO3
+A000235,Ingreso,Ahorro,INGRESO4
+A000236,Egreso,Ahorro,INGRESO5
+A000243,Egreso,Ahorro,INGRESO7
+A000244,Ingreso,Ahorro,INGRESO8
+A000269,Ingreso,Ingreso,INGRESO4
+A000273,Egreso,Ahorro,INGRESO3
+A000276,Egreso,Ahorro,INGRESO9
+A000277,Ingreso,Ahorro,INGRESO10
+A000278,Ingreso,Ahorro,INGRESO6
+A000279,Egreso,Ahorro,INGRESO7
+A000310,Ingreso,Ingreso,INGRESO5
+A000311,Ingreso,Ahorro,INGRESO4
+A000312,Egreso,Ahorro,INGRESO5
+A000313,Ingreso,Ahorro,INGRESO8
+A000314,Egreso,Ahorro,INGRESO9
+A000315,Egreso,Ahorro,INGRESO1
+A000316,Ingreso,Ahorro,INGRESO2
+A000344,Ingreso,Ingreso,INGRESO6
+A000345,Egreso,Ahorro,INGRESO3
+A000346,Ingreso,Ahorro,INGRESO4
+A000350,Ingreso,Ahorro,INGRESO10
+A000351,Egreso,Ahorro,INGRESO1
+A000352,Ingreso,Ahorro,INGRESO6
+A000353,Egreso,Ahorro,INGRESO7
+A000374,Ingreso,Ingreso,INGRESO7
+A000375,Ingreso,Ahorro,INGRESO8
+A000376,Egreso,Ahorro,INGRESO9
+A000377,Egreso,Ahorro,INGRESO5
+A000378,Ingreso,Ahorro,INGRESO6
+A000379,Ingreso,Ahorro,INGRESO2
+A000380,Egreso,Ahorro,INGRESO3
+A000399,Ingreso,Ingreso,INGRESO8
+A000400,Ingreso,Ahorro,INGRESO10
+A000401,Egreso,Ahorro,INGRESO1
+A000402,Egreso,Ahorro,INGRESO7
+A000403,Ingreso,Ahorro,INGRESO8
+A000404,Ingreso,Ahorro,INGRESO4
+A000405,Egreso,Ahorro,INGRESO5
+A000412,Egreso,Actividad Comercial,Actividad Economica
+A000438,Ingreso,Ingreso,INGRESO9
+A000441,Ingreso,Ahorro,INGRESO2
+A000442,Egreso,Ahorro,INGRESO3
+A000443,Egreso,Ahorro,INGRESO9
+A000444,Ingreso,Ahorro,INGRESO10
+A000445,Ingreso,Ahorro,INGRESO6
+A000446,Egreso,Ahorro,INGRESO7
+A000465,Egreso,Actividad Comercial,Actividad Economica
+A000512,Ingreso,Ingreso,INGRESO10
+A000513,Egreso,Ahorro,INGRESO1
+A000514,Ingreso,Ahorro,INGRESO2
+A000515,Ingreso,Ahorro,INGRESO4
+A000516,Egreso,Ahorro,INGRESO5
+A000517,Ingreso,Ahorro,INGRESO8
+A000518,Egreso,Ahorro,INGRESO9
+A000526,Ingreso,Ingreso,INGRESO7
+A000527,Egreso,Ahorro,INGRESO3
+A000528,Ingreso,Ahorro,INGRESO4
+A000547,Ingreso,Ingreso,INGRESO1
+A000548,Ingreso,Ahorro,INGRESO6
+A000549,Egreso,Ahorro,INGRESO7
+A000550,Egreso,Ahorro,INGRESO5
+A000551,Ingreso,Ahorro,INGRESO6
+A000591,Ingreso,Ingreso,INGRESO2
+A000592,Ingreso,Ahorro,INGRESO8
+A000593,Egreso,Ahorro,INGRESO9
+A000596,Egreso,Ahorro,INGRESO7
+A000597,Ingreso,Ahorro,INGRESO8
+A000598,Ingreso,Ahorro,INGRESO10
+A000599,Egreso,Ahorro,INGRESO1
+A000640,Ingreso,Ingreso,INGRESO3
+A000641,Ingreso,Ahorro,INGRESO10
+A000642,Egreso,Ahorro,INGRESO1
+A000645,Egreso,Ahorro,INGRESO9
+A000646,Ingreso,Ahorro,INGRESO10
+A000674,Ingreso,Ingreso,INGRESO4
+A000675,Ingreso,Ahorro,INGRESO2
+A000676,Egreso,Ahorro,INGRESO3
+A000685,Egreso,Ahorro,INGRESO1
+A000686,Ingreso,Ahorro,INGRESO2
+A000687,Ingreso,Ahorro,INGRESO2
+A000688,Egreso,Ahorro,INGRESO3
+A000698,Egreso,Trabajo,INGRESO1
+A000701,Ingreso,Trabajo,INGRESO2
+A000704,Egreso,Trabajo,INGRESO3
+A000705,Ingreso,Ahorro,INGRESO4
+A000706,Egreso,Ahorro,INGRESO5
+A000711,Ingreso,Ingreso,INGRESO5
+A000712,Ingreso,Ahorro,INGRESO6
+A000713,Egreso,Ahorro,INGRESO7
+A000716,Egreso,Ahorro,INGRESO3
+A000717,Ingreso,Ahorro,INGRESO4
+A000718,Ingreso,Ahorro,INGRESO4
+A000719,Egreso,Ahorro,INGRESO5
+A000736,Ingreso,Ingreso,INGRESO6
+A000738,Ingreso,Ahorro,INGRESO8
+A000739,Egreso,Ahorro,INGRESO9
+A000742,Egreso,Ahorro,INGRESO5
+A000743,Ingreso,Ahorro,INGRESO6
+A000744,Ingreso,Ahorro,INGRESO6
+A000745,Egreso,Ahorro,INGRESO7
+A000779,Ingreso,Ingreso,INGRESO7
+A000780,Ingreso,Ahorro,INGRESO10
+A000781,Egreso,Ahorro,INGRESO1
+A000784,Egreso,Ahorro,INGRESO7
+A000785,Ingreso,Ahorro,INGRESO8
+A000828,Ingreso,Ahorro,INGRESO4
+A000833,Ingreso,Ingreso,INGRESO8
+A000837,Ingreso,Ahorro,INGRESO2
+A000838,Egreso,Ahorro,INGRESO3
+A000851,Egreso,Ahorro,INGRESO9
+A000852,Ingreso,Ahorro,INGRESO10
+A000855,Ingreso,Ahorro,INGRESO8
+A000856,Egreso,Ahorro,INGRESO9
+A000874,Ingreso,Ingreso,INGRESO1
+A000875,Egreso,Ahorro,INGRESO1
+A000876,Ingreso,Ahorro,INGRESO2
+A000877,Ingreso,Ahorro,INGRESO4
+A000878,Egreso,Ahorro,INGRESO5
+A000879,Ingreso,Ahorro,INGRESO10
+A000880,Egreso,Ahorro,INGRESO1
+A000883,Ingreso,Ingreso,INGRESO9
+A000884,Ingreso,Ahorro,INGRESO6
+A000885,Egreso,Ahorro,INGRESO7
+A000890,Egreso,Ahorro,INGRESO3
+A000891,Ingreso,Ahorro,INGRESO4
+A000940,Ingreso,Ingreso,INGRESO10
+A000941,Egreso,Ahorro,INGRESO5
+A000942,Ingreso,Ahorro,INGRESO6
+A000945,Ingreso,Ahorro,INGRESO8
+A000946,Egreso,Ahorro,INGRESO9
+A000949,Ingreso,Ahorro,INGRESO2
+A000950,Egreso,Ahorro,INGRESO3
+A000965,Egreso,Trabajo,INGRESO4
+A000978,Ingreso,Ingreso,INGRESO1
+A000988,Egreso,Ahorro,INGRESO7
+A000989,Ingreso,Ahorro,INGRESO8
+A000992,Ingreso,Ahorro,INGRESO10
+A000993,Egreso,Ahorro,INGRESO1
+A001049,Ingreso,Ingreso,INGRESO2
+A001051,Egreso,Ahorro,INGRESO9
+A001052,Ingreso,Ahorro,INGRESO10
+A001055,Ingreso,Ahorro,INGRESO2
+A001056,Egreso,Ahorro,INGRESO3
+A001059,Ingreso,Ahorro,INGRESO4
+A001060,Egreso,Ahorro,INGRESO5
+A001107,Ingreso,Ingreso,INGRESO3
+A001108,Egreso,Ahorro,INGRESO1
+A001109,Ingreso,Ahorro,INGRESO2
+A001112,Ingreso,Ahorro,INGRESO4
+A001113,Egreso,Ahorro,INGRESO5
+A001145,Ingreso,Ingreso,INGRESO4
+A001146,Egreso,Ahorro,INGRESO3
+A001147,Ingreso,Ahorro,INGRESO4
+A001148,Ingreso,Ahorro,INGRESO6
+A001149,Egreso,Ahorro,INGRESO7
+A001189,Ingreso,Ingreso,INGRESO5
+A001191,Egreso,Ahorro,INGRESO5
+A001192,Ingreso,Ahorro,INGRESO6
+A001193,Ingreso,Ahorro,INGRESO8
+A001194,Egreso,Ahorro,INGRESO9
+A001206,Egreso,Actividad Comercial,Actividad Economica
+A001231,Ingreso,Ingreso,INGRESO6
+A001232,Egreso,Ahorro,INGRESO7
+A001233,Ingreso,Ahorro,INGRESO8
+A001234,Ingreso,Ahorro,INGRESO10
+A001235,Egreso,Ahorro,INGRESO1
+A001265,Ingreso,Ahorro,INGRESO5
+A001295,Ingreso,Ingreso,INGRESO7
+A001296,Egreso,Ahorro,INGRESO9
+A001297,Ingreso,Ahorro,INGRESO10
+A001298,Ingreso,Ahorro,INGRESO2
+A001299,Egreso,Ahorro,INGRESO3
+A001310,Ingreso,Ahorro,INGRESO6
+A001316,Egreso,Trabajo,INGRESO5
+A001331,Ingreso,Ingreso,INGRESO8
+A001332,Egreso,Ahorro,INGRESO1
+A001333,Ingreso,Ahorro,INGRESO2
+A001334,Ingreso,Ahorro,INGRESO4
+A001335,Egreso,Ahorro,INGRESO5
+A001340,Ingreso,Ahorro,INGRESO6
+A001341,Egreso,Ahorro,INGRESO7
+A001364,Ingreso,Ingreso,INGRESO9
+A001365,Egreso,Ahorro,INGRESO3
+A001366,Ingreso,Ahorro,INGRESO4
+A001367,Ingreso,Ahorro,INGRESO6
+A001368,Egreso,Ahorro,INGRESO7
+A001380,Egreso,Trabajo,INGRESO6
+A001384,Ingreso,Trabajo,INGRESO2
+A001404,Ingreso,Trabajo,INGRESO3
+A001405,Ingreso,Ingreso,INGRESO7
+A001460,Ingreso,Ingreso,INGRESO10
+A001462,Egreso,Ahorro,INGRESO5
+A001463,Ingreso,Ahorro,INGRESO6
+A001464,Ingreso,Ahorro,INGRESO8
+A001465,Egreso,Ahorro,INGRESO9
+A001470,Ingreso,Ahorro,INGRESO8
+A001471,Egreso,Ahorro,INGRESO9
+A001507,Ingreso,Ingreso,INGRESO1
+A001508,Egreso,Ahorro,INGRESO7
+A001509,Ingreso,Ahorro,INGRESO8
+A001510,Ingreso,Ahorro,INGRESO10
+A001511,Egreso,Ahorro,INGRESO1
+A001516,Ingreso,Ahorro,INGRESO10
+A001517,Egreso,Ahorro,INGRESO1
+A001550,Ingreso,Ingreso,INGRESO2
+A001551,Egreso,Ahorro,INGRESO9
+A001552,Ingreso,Ahorro,INGRESO10
+A001553,Ingreso,Ahorro,INGRESO2
+A001554,Egreso,Ahorro,INGRESO3
+A001559,Ingreso,Ahorro,INGRESO2
+A001560,Egreso,Ahorro,INGRESO3
+A001575,Ingreso,Ingreso,INGRESO3
+A001576,Egreso,Ahorro,INGRESO1
+A001577,Ingreso,Ahorro,INGRESO2
+A001578,Ingreso,Ahorro,INGRESO4
+A001579,Egreso,Ahorro,INGRESO5
+A001584,Ingreso,Ahorro,INGRESO4
+A001585,Egreso,Ahorro,INGRESO5
+A001625,Ingreso,Ingreso,INGRESO4
+A001626,Egreso,Ahorro,INGRESO3
+A001627,Ingreso,Ahorro,INGRESO4
+A001628,Ingreso,Ahorro,INGRESO6
+A001629,Egreso,Ahorro,INGRESO7
+A001634,Ingreso,Ahorro,INGRESO6
+A001635,Egreso,Ahorro,INGRESO7
+A001644,Ingreso,Ingreso,INGRESO8
+A001656,Ingreso,Ingreso,INGRESO5
+A001660,Egreso,Ahorro,INGRESO5
+A001661,Ingreso,Ahorro,INGRESO6
+A001662,Ingreso,Ahorro,INGRESO8
+A001663,Egreso,Ahorro,INGRESO9
+A001668,Ingreso,Ahorro,INGRESO8
+A001669,Egreso,Ahorro,INGRESO9
+A001687,Ingreso,Ingreso,INGRESO7
+A001708,Ingreso,Ingreso,INGRESO6
+A001709,Egreso,Ahorro,INGRESO7
+A001710,Ingreso,Ahorro,INGRESO8
+A001711,Ingreso,Ahorro,INGRESO10
+A001712,Egreso,Ahorro,INGRESO1
+A001717,Ingreso,Ahorro,INGRESO10
+A001718,Egreso,Ahorro,INGRESO1
+A001740,Ingreso,Ingreso,INGRESO7
+A001741,Egreso,Ahorro,INGRESO9
+A001742,Ingreso,Ahorro,INGRESO10
+A001743,Ingreso,Ahorro,INGRESO2
+A001744,Egreso,Ahorro,INGRESO3
+A001797,Ingreso,Ingreso,INGRESO8
+A001804,Egreso,Trabajo,INGRESO4
+A001811,Egreso,Trabajo,INGRESO5
+A001837,Ingreso,Ingreso,INGRESO9
+A001839,Egreso,Ahorro,INGRESO1
+A001840,Ingreso,Ahorro,INGRESO2
+A001841,Ingreso,Ahorro,INGRESO4
+A001842,Egreso,Ahorro,INGRESO5
+A001876,Ingreso,Ingreso,INGRESO10
+A001877,Ingreso,Ahorro,INGRESO6
+A001878,Egreso,Ahorro,INGRESO7
+A001883,Egreso,Ahorro,INGRESO3
+A001884,Ingreso,Ahorro,INGRESO4
+A001970,Ingreso,Ingreso,INGRESO1
+A001982,Ingreso,Trabajo,INGRESO4
+A002022,Egreso,Actividad Comercial,Actividad Economica
+A002053,Ingreso,Ingreso,INGRESO2
+A002054,Ingreso,Ahorro,INGRESO8
+A002055,Egreso,Ahorro,INGRESO9
+A002058,Egreso,Ahorro,INGRESO5
+A002059,Ingreso,Ahorro,INGRESO6
+A002097,Ingreso,Ingreso,INGRESO3
+A002115,Ingreso,Ahorro,INGRESO10
+A002116,Egreso,Ahorro,INGRESO1
+A002121,Egreso,Ahorro,INGRESO7
+A002122,Ingreso,Ahorro,INGRESO8
+A002137,Ingreso,Ingreso,INGRESO4
+A002138,Ingreso,Ahorro,INGRESO2
+A002139,Egreso,Ahorro,INGRESO3
+A002140,Egreso,Ahorro,INGRESO9
+A002141,Ingreso,Ahorro,INGRESO10
+A002142,Ingreso,Ahorro,INGRESO2
+A002143,Egreso,Ahorro,INGRESO3
+A002149,Ingreso,Ingreso,INGRESO4
+A002150,Ingreso,Ahorro,INGRESO4
+A002151,Egreso,Ahorro,INGRESO5
+A002156,Egreso,Ahorro,INGRESO1
+A002157,Ingreso,Ahorro,INGRESO2
+A002158,Ingreso,Ahorro,INGRESO4
+A002159,Egreso,Ahorro,INGRESO5
+A002181,Egreso,Actividad Comercial,Actividad Economica
+A002183,Ingreso,Ingreso,INGRESO2
+A002184,Ingreso,Ahorro,INGRESO6
+A002185,Egreso,Ahorro,INGRESO7
+A002188,Egreso,Ahorro,INGRESO3
+A002189,Ingreso,Ahorro,INGRESO4
+A002192,Ingreso,Ahorro,INGRESO6
+A002193,Egreso,Ahorro,INGRESO7
+A002221,Ingreso,Ingreso,INGRESO5
+A002222,Ingreso,Ahorro,INGRESO8
+A002223,Egreso,Ahorro,INGRESO9
+A002224,Egreso,Ahorro,INGRESO5
+A002225,Ingreso,Ahorro,INGRESO6
+A002239,Ingreso,Ingreso,INGRESO5
+A002270,Ingreso,Ingreso,INGRESO6
+A002271,Ingreso,Ahorro,INGRESO10
+A002272,Egreso,Ahorro,INGRESO1
+A002275,Egreso,Ahorro,INGRESO7
+A002276,Ingreso,Ahorro,INGRESO8
+A002277,Ingreso,Ahorro,INGRESO8
+A002278,Egreso,Ahorro,INGRESO9
+A002320,Egreso,Actividad Comercial,Actividad Economica
+A002345,Egreso,Actividad Comercial,Actividad Economica
+A002363,Ingreso,Ingreso,INGRESO7
+A002364,Ingreso,Ahorro,INGRESO2
+A002365,Egreso,Ahorro,INGRESO3
+A002370,Egreso,Ahorro,INGRESO9
+A002371,Ingreso,Ahorro,INGRESO10
+A002372,Ingreso,Ahorro,INGRESO10
+A002373,Egreso,Ahorro,INGRESO1
+A002410,Egreso,Actividad Comercial,Actividad Economica
+A002437,Ingreso,Ingreso,INGRESO8
+A002438,Ingreso,Ahorro,INGRESO4
+A002439,Egreso,Ahorro,INGRESO5
+A002444,Egreso,Ahorro,INGRESO1
+A002445,Ingreso,Ahorro,INGRESO2
+A002446,Ingreso,Ahorro,INGRESO2
+A002447,Egreso,Ahorro,INGRESO3
+A002474,Ingreso,Ingreso,INGRESO9
+A002488,Ingreso,Ahorro,INGRESO6
+A002489,Egreso,Ahorro,INGRESO7
+A002494,Egreso,Ahorro,INGRESO3
+A002495,Ingreso,Ahorro,INGRESO4
+A002520,Egreso,Actividad Comercial,Actividad Economica
+A002548,Ingreso,Ingreso,INGRESO10
+A002549,Ingreso,Ahorro,INGRESO8
+A002550,Egreso,Ahorro,INGRESO9
+A002555,Egreso,Ahorro,INGRESO5
+A002556,Ingreso,Ahorro,INGRESO6
+A002557,Ingreso,Ahorro,INGRESO4
+A002558,Egreso,Ahorro,INGRESO5
+A002596,Ingreso,Ingreso,INGRESO1
+A002598,Ingreso,Ahorro,INGRESO10
+A002599,Egreso,Ahorro,INGRESO1
+A002604,Egreso,Ahorro,INGRESO7
+A002605,Ingreso,Ahorro,INGRESO8
+A002606,Ingreso,Ahorro,INGRESO6
+A002607,Egreso,Ahorro,INGRESO7
+A002620,Ingreso,Actividad Comercial,Actividad Economica
+A002621,Ingreso,Ingreso,INGRESO2
+A002625,Ingreso,Ahorro,INGRESO2
+A002626,Egreso,Ahorro,INGRESO3
+A002631,Egreso,Ahorro,INGRESO9
+A002632,Ingreso,Ahorro,INGRESO10
+A002633,Ingreso,Ahorro,INGRESO8
+A002634,Egreso,Ahorro,INGRESO9
+A002646,Egreso,Actividad Comercial,Actividad Economica
+A002676,Ingreso,Ingreso,INGRESO3
+A002677,Ingreso,Ahorro,INGRESO4
+A002678,Egreso,Ahorro,INGRESO5
+A002683,Egreso,Ahorro,INGRESO1
+A002684,Ingreso,Ahorro,INGRESO2
+A002685,Ingreso,Ahorro,INGRESO10
+A002686,Egreso,Ahorro,INGRESO1
+A002741,Ingreso,Ingreso,INGRESO4
+A002753,Ingreso,Ahorro,INGRESO6
+A002754,Egreso,Ahorro,INGRESO7
+A002759,Egreso,Ahorro,INGRESO3
+A002760,Ingreso,Ahorro,INGRESO4
+A002761,Ingreso,Ahorro,INGRESO2
+A002762,Egreso,Ahorro,INGRESO3
+A002816,Ingreso,Ingreso,INGRESO5
+A002822,Ingreso,Ahorro,INGRESO8
+A002823,Egreso,Ahorro,INGRESO9
+A002830,Ingreso,Ahorro,INGRESO4
+A002831,Egreso,Ahorro,INGRESO5
+A002918,Egreso,Actividad Comercial,Actividad Economica
+A002935,Egreso,Actividad Comercial,Actividad Economica
+A002938,Ingreso,Ingreso,INGRESO6
+A002940,Ingreso,Ahorro,INGRESO10
+A002941,Egreso,Ahorro,INGRESO1
+A002944,Egreso,Ahorro,INGRESO5
+A002945,Ingreso,Ahorro,INGRESO6
+A002946,Ingreso,Ahorro,INGRESO6
+A002947,Egreso,Ahorro,INGRESO7
+A002986,Ingreso,Trabajo,INGRESO7
+A002987,Egreso,Trabajo,INGRESO1
+A003008,Ingreso,Ingreso,INGRESO7
+A003018,Ingreso,Trabajo,INGRESO8
+A003048,Egreso,Actividad Comercial,Actividad Economica
+A003050,Ingreso,Trabajo,INGRESO9
+A003089,Ingreso,Ingreso,INGRESO8
+A003090,Ingreso,Ahorro,INGRESO2
+A003091,Egreso,Ahorro,INGRESO3
+A003094,Egreso,Ahorro,INGRESO7
+A003095,Ingreso,Ahorro,INGRESO8
+A003096,Ingreso,Ahorro,INGRESO8
+A003097,Egreso,Ahorro,INGRESO9
+A003121,Ingreso,Ingreso,INGRESO9
+A003122,Ingreso,Ahorro,INGRESO4
+A003123,Egreso,Ahorro,INGRESO5
+A003130,Egreso,Ahorro,INGRESO9
+A003131,Ingreso,Ahorro,INGRESO10
+A003132,Ingreso,Ahorro,INGRESO10
+A003133,Egreso,Ahorro,INGRESO1
+A003158,Ingreso,Ingreso,INGRESO9
+A003159,Ingreso,Ahorro,INGRESO6
+A003160,Egreso,Ahorro,INGRESO7
+A003165,Egreso,Ahorro,INGRESO1
+A003166,Ingreso,Ahorro,INGRESO2
+A003167,Ingreso,Ahorro,INGRESO2
+A003168,Egreso,Ahorro,INGRESO3
+A003216,Ingreso,Ingreso,INGRESO10
+A003217,Ingreso,Ahorro,INGRESO8
+A003218,Egreso,Ahorro,INGRESO9
+A003223,Egreso,Ahorro,INGRESO3
+A003224,Ingreso,Ahorro,INGRESO4
+A003227,Ingreso,Ahorro,INGRESO4
+A003228,Egreso,Ahorro,INGRESO5
+A003246,Egreso,Actividad Comercial,Actividad Economica
+A003285,Ingreso,Ingreso,INGRESO1
+A003286,Ingreso,Ahorro,INGRESO10
+A003287,Egreso,Ahorro,INGRESO1
+A003292,Egreso,Ahorro,INGRESO5
+A003293,Ingreso,Ahorro,INGRESO6
+A003294,Ingreso,Ahorro,INGRESO6
+A003295,Egreso,Ahorro,INGRESO7
+A003331,Ingreso,Ingreso,INGRESO2
+A003332,Ingreso,Ahorro,INGRESO2
+A003333,Egreso,Ahorro,INGRESO3
+A003340,Egreso,Ahorro,INGRESO7
+A003341,Ingreso,Ahorro,INGRESO8
+A003342,Ingreso,Ahorro,INGRESO8
+A003343,Egreso,Ahorro,INGRESO9
+A003367,Egreso,Actividad Comercial,Actividad Economica
+A003377,Ingreso,Ingreso,INGRESO3
+A003378,Ingreso,Ahorro,INGRESO4
+A003379,Egreso,Ahorro,INGRESO5
+A003384,Egreso,Ahorro,INGRESO9
+A003385,Ingreso,Ahorro,INGRESO10
+A003386,Ingreso,Ahorro,INGRESO10
+A003387,Egreso,Ahorro,INGRESO1
+A003425,Ingreso,Ingreso,INGRESO4
+A003426,Ingreso,Ahorro,INGRESO6
+A003427,Egreso,Ahorro,INGRESO7
+A003432,Egreso,Ahorro,INGRESO1
+A003433,Ingreso,Ahorro,INGRESO2
+A003434,Ingreso,Ahorro,INGRESO2
+A003435,Egreso,Ahorro,INGRESO3
+A003479,Ingreso,Ingreso,INGRESO5
+A003480,Ingreso,Ahorro,INGRESO8
+A003481,Egreso,Ahorro,INGRESO9
+A003486,Egreso,Ahorro,INGRESO3
+A003487,Ingreso,Ahorro,INGRESO4
+A003488,Ingreso,Ahorro,INGRESO4
+A003489,Egreso,Ahorro,INGRESO5
+A003522,Ingreso,Ingreso,INGRESO6
+A003523,Ingreso,Ingreso,INGRESO6
+A003526,Ingreso,Ahorro,INGRESO10
+A003527,Egreso,Ahorro,INGRESO1
+A003536,Egreso,Ahorro,INGRESO5
+A003537,Ingreso,Ahorro,INGRESO6
+A003574,Ingreso,Ingreso,INGRESO7
+A003577,Ingreso,Ahorro,INGRESO2
+A003578,Egreso,Ahorro,INGRESO3
+A003583,Egreso,Ahorro,INGRESO7
+A003584,Ingreso,Ahorro,INGRESO8
+A003619,Ingreso,Ingreso,INGRESO8
+A003620,Ingreso,Ahorro,INGRESO4
+A003621,Egreso,Ahorro,INGRESO5
+A003626,Egreso,Ahorro,INGRESO9
+A003627,Ingreso,Ahorro,INGRESO10
+A003700,Ingreso,Ingreso,INGRESO3
+A003705,Ingreso,Ingreso,INGRESO9
+A003706,Ingreso,Ahorro,INGRESO6
+A003707,Egreso,Ahorro,INGRESO7
+A003790,Ingreso,Ingreso,INGRESO10
+A003791,Ingreso,Ahorro,INGRESO8
+A003792,Egreso,Ahorro,INGRESO9
+A003855,Ingreso,Ingreso,INGRESO1
+A003862,Ingreso,Ahorro,INGRESO6
+A003863,Egreso,Ahorro,INGRESO7
+A003873,Egreso,Actividad Comercial,Actividad Economica
+A003933,Ingreso,Ingreso,INGRESO2
+A003981,Egreso,Actividad Comercial,Actividad Economica
+A003982,Ingreso,Ingreso,INGRESO3
+A004044,Ingreso,Ingreso,INGRESO4
+A004051,Ingreso,Ahorro,INGRESO8
+A004052,Egreso,Ahorro,INGRESO9
+A004080,Ingreso,Actividad Comercial,Actividad Economica
+A004081,Ingreso,Actividad Comercial,Actividad Economica
+A004082,Ingreso,Actividad Comercial,Actividad Economica
+A004083,Ingreso,Actividad Comercial,Actividad Economica
+A004084,Ingreso,Actividad Comercial,Actividad Economica
+A004091,Ingreso,Ingreso,INGRESO5
+A004101,Ingreso,Ahorro,INGRESO10
+A004102,Egreso,Ahorro,INGRESO1
+A004136,Ingreso,Ingreso,INGRESO6
+A004143,Ingreso,Ahorro,INGRESO2
+A004144,Egreso,Ahorro,INGRESO3
+A004189,Ingreso,Ingreso,INGRESO7
+A004227,Ingreso,Actividad Comercial,Actividad Economica
+A004236,Ingreso,Actividad Comercial,Actividad Economica
+A004237,Ingreso,Actividad Comercial,Actividad Economica
+A004238,Ingreso,Actividad Comercial,Actividad Economica
+A004240,Ingreso,Ingreso,INGRESO8
+A004271,Ingreso,Actividad Comercial,Actividad Economica
+A004272,Ingreso,Actividad Comercial,Actividad Economica
+A004283,Ingreso,Ingreso,INGRESO9
+A004292,Ingreso,Ahorro,INGRESO4
+A004293,Egreso,Ahorro,INGRESO5
+A004335,Ingreso,Actividad Comercial,Actividad Economica
+A004336,Ingreso,Ingreso,INGRESO10
+A004343,Ingreso,Ahorro,INGRESO6
+A004344,Egreso,Ahorro,INGRESO7
+A004384,Ingreso,Ingreso,INGRESO1
+A004387,Ingreso,Ahorro,INGRESO8
+A004388,Egreso,Ahorro,INGRESO9
+A004415,Egreso,Actividad Comercial,Actividad Economica
+A004425,Ingreso,Actividad Comercial,Actividad Economica
+A004427,Ingreso,Ingreso,INGRESO2
+A004460,Ingreso,Ingreso,INGRESO10
+A004465,Ingreso,Ahorro,INGRESO10
+A004466,Egreso,Ahorro,INGRESO1
+A004482,Ingreso,Ingreso,INGRESO3
+A004489,Ingreso,Ahorro,INGRESO2
+A004490,Egreso,Ahorro,INGRESO3
+A004569,Ingreso,Ingreso,INGRESO4
+A004576,Ingreso,Ahorro,INGRESO4
+A004577,Egreso,Ahorro,INGRESO5
+A004612,Ingreso,Ingreso,INGRESO5
+A004622,Ingreso,Actividad Comercial,Actividad Economica
+A004636,Egreso,Actividad Comercial,Actividad Economica
+A004637,Ingreso,Actividad Comercial,Actividad Economica
+A004642,Ingreso,Ingreso,INGRESO6
+A004656,Egreso,Ahorro,INGRESO6
+A004657,Ingreso,Ahorro,INGRESO7
+A004698,Ingreso,Ingreso,INGRESO7
+A004728,Ingreso,Ingreso,INGRESO8
+A004737,Ingreso,Ahorro,INGRESO8
+A004738,Egreso,Ahorro,INGRESO9
+A004759,Ingreso,Actividad Comercial,Actividad Economica
+A004780,Ingreso,Ingreso,INGRESO9
+A004787,Ingreso,Ahorro,INGRESO10
+A004788,Egreso,Ahorro,INGRESO1
+A004792,Ingreso,Trabajo,INGRESO10
+A004793,Ingreso,Trabajo,INGRESO5
+A004843,Egreso,Actividad Comercial,Actividad Economica
+A004846,Ingreso,Actividad Comercial,Actividad Economica
+A004926,Ingreso,Ingreso,INGRESO10
+A004998,Ingreso,Ingreso,INGRESO1
+A005070,Ingreso,Ingreso,INGRESO2
+A005112,Ingreso,Ingreso,INGRESO4
+A005113,Ingreso,Ingreso,INGRESO7
+A005123,Ingreso,Ahorro,INGRESO2
+A005124,Egreso,Ahorro,INGRESO3
+A005138,Egreso,Actividad Comercial,Actividad Economica
+A005170,Ingreso,Ingreso,INGRESO3
+A005173,Ingreso,Ahorro,INGRESO4
+A005174,Egreso,Ahorro,INGRESO5
+A005180,Ingreso,Actividad Comercial,Actividad Economica
+A005216,Ingreso,Ingreso,INGRESO4
+A005221,Ingreso,Ahorro,INGRESO6
+A005222,Egreso,Ahorro,INGRESO7
+A005280,Egreso,Ahorro,INGRESO8
+A005281,Ingreso,Ahorro,INGRESO9
+A005303,Ingreso,Ingreso,INGRESO5
+A005386,Ingreso,Ingreso,INGRESO6
+A005389,Ingreso,Ahorro,INGRESO10
+A005390,Egreso,Ahorro,INGRESO1
+A005453,Ingreso,Ingreso,INGRESO7
+A005479,Ingreso,Actividad Comercial,Actividad Economica
+A005502,Ingreso,Ingreso,INGRESO8
+A005577,Ingreso,Ingreso,INGRESO9
+A005614,Ingreso,Ingreso,INGRESO10
+A005666,Ingreso,Ingreso,INGRESO1
+A005729,Ingreso,Ingreso,INGRESO6
+A005730,Ingreso,Ingreso,INGRESO7
+A005784,Ingreso,Ingreso,INGRESO2
+A005841,Ingreso,Ingreso,INGRESO9
+A005911,Ingreso,Ingreso,INGRESO3
+A006002,Ingreso,Ingreso,INGRESO4
+A006060,Ingreso,Ingreso,INGRESO5
+A006120,Ingreso,Ingreso,INGRESO6
+A006144,Ingreso,Trabajo,INGRESO6
+A006149,Egreso,Trabajo,INGRESO7
+A006150,Egreso,Trabajo,INGRESO7
+A006164,Ingreso,Ingreso,INGRESO1
+A006196,Ingreso,Ingreso,INGRESO7
+A006264,Ingreso,Trabajo,INGRESO6
+A006265,Ingreso,Trabajo,INGRESO8
+A006303,Ingreso,Ingreso,INGRESO8
+A006345,Ingreso,Ingreso,INGRESO9
+A006368,Egreso,Actividad Comercial,Actividad Economica
+A006380,Ingreso,Ingreso,INGRESO10
+A006418,Ingreso,Ingreso,INGRESO1
+A006426,Egreso,Actividad Comercial,Actividad Economica
+A006467,Ingreso,Ingreso,INGRESO2
+A006512,Egreso,Actividad Comercial,Actividad Economica
+A006519,Ingreso,Ingreso,INGRESO3
+A006563,Ingreso,Ingreso,INGRESO10
+A006573,Ingreso,Ingreso,INGRESO4
+A006597,Ingreso,Ingreso,INGRESO8
+A006598,Ingreso,Ingreso,INGRESO5
+A006651,Ingreso,Ingreso,INGRESO6
+A006682,Ingreso,Ingreso,INGRESO5
+A006714,Ingreso,Ingreso,INGRESO7
+A006761,Ingreso,Ingreso,INGRESO8
+A006809,Ingreso,Ingreso,INGRESO9
+A006844,Ingreso,Ingreso,INGRESO10
+A006861,Ingreso,Ingreso,INGRESO1
+A006881,Ingreso,Ingreso,INGRESO1
+A006963,Ingreso,Ingreso,INGRESO2
+A007006,Ingreso,Actividad Comercial,Actividad Economica
+A007031,Ingreso,Ingreso,INGRESO3
+A007077,Egreso,Actividad Comercial,Actividad Economica
+A007082,Egreso,Actividad Comercial,Actividad Economica
+A007105,Ingreso,Ingreso,INGRESO4
+A007184,Ingreso,Ingreso,INGRESO5
+A007278,Ingreso,Actividad Comercial,Actividad Economica
+A007281,Ingreso,Ingreso,INGRESO6
+A007335,Ingreso,Ingreso,INGRESO7
+A007365,Ingreso,Actividad Comercial,Actividad Economica
+A007366,Ingreso,Actividad Comercial,Actividad Economica
+A007367,Ingreso,Ingreso,INGRESO8
+A007413,Ingreso,Ingreso,INGRESO9
+A007477,Ingreso,Ingreso,INGRESO10
+A007487,Ingreso,Ingreso,INGRESO2
+A007531,Ingreso,Ingreso,INGRESO1
+A007590,Ingreso,Ingreso,INGRESO2
+A007638,Ingreso,Ingreso,INGRESO3
+A007663,Egreso,Actividad Comercial,Actividad Economica
+A007664,Egreso,Actividad Comercial,Actividad Economica
+A007688,Ingreso,Ingreso,INGRESO4
+A007719,Ingreso,Actividad Comercial,Actividad Economica
+A007720,Ingreso,Actividad Comercial,Actividad Economica
+A007748,Ingreso,Ingreso,INGRESO5
+A007781,Ingreso,Ingreso,INGRESO6
+A007850,Ingreso,Ingreso,INGRESO7
+A007924,Ingreso,Ingreso,INGRESO8
+A007968,Ingreso,Ingreso,INGRESO9
+A007980,Ingreso,Ingreso,INGRESO9
+A008048,Ingreso,Ingreso,INGRESO10
+A008066,Ingreso,Ingreso,INGRESO6
+A008112,Egreso,Ahorro,INGRESO2
+A008115,Egreso,Ahorro,INGRESO3
+A008120,Ingreso,Ingreso,INGRESO1
+A008175,Ingreso,Ingreso,INGRESO2
+A008207,Ingreso,Ahorro,INGRESO4
+A008243,Ingreso,Ingreso,INGRESO2
+A008281,Ingreso,Ingreso,INGRESO3
+A008328,Ingreso,Ingreso,INGRESO4
+A008395,Ingreso,Ingreso,INGRESO5
+A008410,Egreso,Actividad Comercial,Actividad Economica
+A008433,Ingreso,Ingreso,INGRESO6
+A008473,Ingreso,Ingreso,INGRESO7
+A008515,Ingreso,Actividad Comercial,Actividad Economica
+A008525,Ingreso,Ingreso,INGRESO8
+A008574,Ingreso,Ingreso,INGRESO9
+A008613,Ingreso,Ingreso,INGRESO10
+A008683,Ingreso,Ingreso,INGRESO1
+A008743,Ingreso,Ingreso,INGRESO2
+A008793,Ingreso,Ingreso,INGRESO3
+A008847,Egreso,Ahorro,INGRESO5
+A008848,Egreso,Ahorro,INGRESO7
+A008882,Egreso,Ahorro,INGRESO6
+A008885,Ingreso,Ingreso,INGRESO4
+A008888,Egreso,Ahorro,INGRESO9
+A008889,Egreso,Ahorro,INGRESO2
+A008898,Ingreso,Ahorro,INGRESO10
+A008912,Ingreso,Ahorro,INGRESO1
+A008913,Ingreso,Ingreso,INGRESO3
+A008923,Ingreso,Ahorro,INGRESO2
+A008949,Egreso,Ahorro,INGRESO7
+A008959,Ingreso,Ahorro,INGRESO3
+A008960,Egreso,Ahorro,INGRESO3
+A008961,Ingreso,Ingreso,INGRESO5
+A008962,Egreso,Ahorro,INGRESO8
+A008980,Ingreso,Ahorro,INGRESO4
+A008992,Ingreso,Ahorro,INGRESO5
+A008993,Egreso,Ahorro,INGRESO9
+A008994,Ingreso,Ahorro,INGRESO6
+A009020,Ingreso,Ahorro,INGRESO7
+A009032,Egreso,Ahorro,INGRESO10
+A009039,Ingreso,Ingreso,INGRESO6
+A009041,Ingreso,Ahorro,INGRESO8
+A009063,Egreso,Ahorro,INGRESO1
+A009065,Ingreso,Ahorro,INGRESO9
+A009079,Egreso,Ahorro,INGRESO2
+A009082,Ingreso,Ingreso,INGRESO7
+A009084,Ingreso,Ahorro,INGRESO10
+A009086,Ingreso,Ahorro,INGRESO1
+A009089,Egreso,Ahorro,INGRESO3
+A009110,Ingreso,Ahorro,INGRESO2
+A009126,Ingreso,Ingreso,INGRESO8
+A009137,Ingreso,Ahorro,INGRESO3
+A009154,Ingreso,Ahorro,INGRESO4
+A009155,Egreso,Ahorro,INGRESO4
+A009180,Ingreso,Ahorro,INGRESO5
+A009184,Ingreso,Ingreso,INGRESO9
+A009197,Ingreso,Ahorro,INGRESO6
+A009199,Ingreso,Ahorro,INGRESO5
+A009200,Egreso,Ahorro,INGRESO7
+A009215,Ingreso,Ahorro,INGRESO8
+A009222,Ingreso,Ingreso,INGRESO10
+A009242,Ingreso,Ahorro,INGRESO9
+A009244,Ingreso,Ahorro,INGRESO10
+A009250,Ingreso,Ahorro,INGRESO1
+A009253,Ingreso,Ahorro,INGRESO2
+A009267,Ingreso,Ingreso,INGRESO1
+A009270,Ingreso,Ahorro,INGRESO3
+A009294,Ingreso,Ahorro,INGRESO4
+A009306,Ingreso,Ahorro,INGRESO5
+A009320,Ingreso,Ingreso,INGRESO2
+A009321,Ingreso,Ahorro,INGRESO6
+A009322,Egreso,Ahorro,INGRESO6
+A009340,Ingreso,Ahorro,INGRESO7
+A009355,Ingreso,Ahorro,INGRESO8
+A009366,Ingreso,Actividad Comercial,Actividad Economica
+A009376,Ingreso,Ingreso,INGRESO3
+A009379,Ingreso,Ahorro,INGRESO9
+A009404,Ingreso,Ingreso,INGRESO10
+A009414,Ingreso,Ingreso,INGRESO4
+A009417,Ingreso,Ahorro,INGRESO10
+A009427,Ingreso,Ahorro,INGRESO1
+A009438,Ingreso,Ingreso,INGRESO7
+A009449,Ingreso,Ingreso,INGRESO5
+A009569,Ingreso,Ingreso,INGRESO6
+A009589,Ingreso,Actividad Comercial,Actividad Economica
+A009619,Ingreso,Actividad Comercial,Actividad Economica
+A009624,Ingreso,Ingreso,INGRESO7
+A009646,Ingreso,Ingreso,INGRESO3
+A009657,Ingreso,Ingreso,INGRESO8
+A009694,Ingreso,Ingreso,INGRESO8
+A009750,Ingreso,Ingreso,INGRESO8
+A009754,Ingreso,Actividad Comercial,Actividad Economica
+A009755,Ingreso,Actividad Comercial,Actividad Economica
+A010350,Ingreso,Ingreso,INGRESO4
+A010463,Ingreso,Actividad Comercial,Actividad Economica
+A010872,Egreso,Ahorro,INGRESO3
+A010912,Ingreso,Ahorro,INGRESO7
+A010966,Egreso,Ahorro,INGRESO4
+A010975,Ingreso,Ahorro,INGRESO8
+A011050,Egreso,Ahorro,INGRESO5
+A011094,Egreso,Ahorro,INGRESO6
+A011201,Ingreso,Ahorro,INGRESO9
+A011273,Egreso,Ahorro,INGRESO7
+A011305,Egreso,Ahorro,INGRESO8
+A011343,Ingreso,Ahorro,INGRESO10
+A011372,Ingreso,Ahorro,INGRESO1
+A011411,Ingreso,Ahorro,INGRESO2
+A011412,Ingreso,Ingreso,INGRESO5
+A011444,Egreso,Ahorro,INGRESO9
+A011561,Ingreso,Ahorro,INGRESO3
+A011575,Egreso,Ahorro,INGRESO10
+A011592,Ingreso,Ahorro,INGRESO4
+A011609,Egreso,Ahorro,INGRESO1
+A011667,Ingreso,Ahorro,INGRESO5
+A011720,Ingreso,Ingreso,INGRESO1
+A011721,Egreso,Ahorro,INGRESO2
+A011775,Ingreso,Ahorro,INGRESO6
+A011799,Ingreso,Ahorro,INGRESO7
+A011810,Ingreso,Ahorro,INGRESO8
+A011873,Ingreso,Ahorro,INGRESO9
+A011889,Ingreso,Ahorro,INGRESO10
+A011929,Egreso,Ahorro,INGRESO3
+A011964,Ingreso,Ingreso,INGRESO6
+A011987,Egreso,Ahorro,INGRESO4
+A012034,Egreso,Ahorro,INGRESO5
+A012055,Ingreso,Ahorro,INGRESO1
+A012130,Ingreso,Ahorro,INGRESO2
+A012146,Egreso,Ahorro,INGRESO6
+A012209,Ingreso,Ahorro,INGRESO3
+A012300,Egreso,Ahorro,INGRESO7
+A012316,Ingreso,Ahorro,INGRESO4
+A012337,Egreso,Ahorro,INGRESO8
+A012339,Ingreso,Ingreso,INGRESO7
+A012349,Ingreso,Ingreso,INGRESO9
+A012350,Ingreso,Ahorro,INGRESO5
+A012397,Egreso,Ahorro,INGRESO9
+A012417,Egreso,Ahorro,INGRESO10
+A012477,Ingreso,Ahorro,INGRESO6
+A012495,Egreso,Ahorro,INGRESO1
+A012508,Egreso,Ahorro,INGRESO2
+A012593,Ingreso,Trabajo,INGRESO1
+A012596,Ingreso,Ahorro,INGRESO7
+A012648,Ingreso,Ahorro,INGRESO8
+A012662,Ingreso,Ingreso,INGRESO8
+A012675,Egreso,Ahorro,INGRESO3
+A012718,Egreso,Actividad Comercial,Actividad Economica
+A012719,Egreso,Actividad Comercial,Actividad Economica
+A012720,Ingreso,Actividad Comercial,Actividad Economica
+A012725,Egreso,Actividad Comercial,Actividad Economica
+A012726,Ingreso,Actividad Comercial,Actividad Economica
+A012746,Egreso,Ahorro,INGRESO4
+A012794,Ingreso,Ahorro,INGRESO9
+A012795,Ingreso,Ingreso,INGRESO9
+A012816,Egreso,Ahorro,INGRESO5
+A012818,Ingreso,Actividad Comercial,Actividad Economica
+A012819,Egreso,Actividad Comercial,Actividad Economica
+A012820,Egreso,Actividad Comercial,Actividad Economica
+A012821,Ingreso,Actividad Comercial,Actividad Economica
+A012822,Egreso,Actividad Comercial,Actividad Economica
+A012837,Ingreso,Ahorro,INGRESO10
+A012873,Ingreso,Actividad Comercial,Actividad Economica
+A012903,Ingreso,Ahorro,INGRESO1
+A012959,Egreso,Ahorro,INGRESO6
+A012981,Ingreso,Actividad Comercial,Actividad Economica
+A012987,Egreso,Ahorro,INGRESO7
+A012997,Ingreso,Ahorro,INGRESO2
+A013015,Egreso,Ahorro,INGRESO8
+A013018,Ingreso,Ingreso,INGRESO10
+A013040,Egreso,Ahorro,INGRESO9
+A013066,Ingreso,Ahorro,INGRESO3
+A013131,Ingreso,Ahorro,INGRESO4
+A013165,Egreso,Ahorro,INGRESO10
+A013311,Ingreso,Ahorro,INGRESO5
+A013357,Egreso,Ahorro,INGRESO1
+A013358,Ingreso,Ahorro,INGRESO6
+A013361,Ingreso,Ahorro,INGRESO7
+A013392,Ingreso,Ahorro,INGRESO8
+A013399,Ingreso,Ingreso,INGRESO10
+A013402,Egreso,Ahorro,INGRESO2
+A013469,Ingreso,Ahorro,INGRESO9
+A013499,Ingreso,Ahorro,INGRESO10
+A013582,Ingreso,Ahorro,INGRESO1
+A013604,Egreso,Ahorro,INGRESO3
+A013637,Ingreso,Trabajo,INGRESO2
+A013653,Ingreso,Ingreso,INGRESO3
+A013725,Egreso,Ahorro,INGRESO4
+A013737,Egreso,Trabajo,INGRESO8
+A013738,Egreso,Trabajo,INGRESO3
+A013755,Egreso,Ahorro,INGRESO5
+A013762,Ingreso,Trabajo,INGRESO9
+A013770,Ingreso,Ahorro,INGRESO2
+A014021,Egreso,Ahorro,INGRESO6
+A014042,Ingreso,Ahorro,INGRESO3
+A014047,Egreso,Ahorro,INGRESO7
+A014076,Egreso,Actividad Comercial,Actividad Economica
+A014089,Ingreso,Ahorro,INGRESO4
+A014305,Ingreso,Ingreso,INGRESO1
+A014307,Egreso,Actividad Comercial,Actividad Economica
+A014308,Ingreso,Actividad Comercial,Actividad Economica
+A014408,Ingreso,Otros,INGRESO10
+A014469,Egreso,Actividad Comercial,Actividad Economica
+A014492,Ingreso,Actividad Comercial,Actividad Economica
+A014493,Ingreso,Actividad Comercial,Actividad Economica
+A014496,Egreso,Actividad Comercial,Actividad Economica
+A014497,Egreso,Actividad Comercial,Actividad Economica
+A014498,Egreso,Actividad Comercial,Actividad Economica
+A014499,Egreso,Actividad Comercial,Actividad Economica
+A014500,Egreso,Actividad Comercial,Actividad Economica
+A014501,Egreso,Actividad Comercial,Actividad Economica
+A014502,Egreso,Actividad Comercial,Actividad Economica
+A014503,Egreso,Actividad Comercial,Actividad Economica
+A014504,Egreso,Actividad Comercial,Actividad Economica
+A014505,Egreso,Actividad Comercial,Actividad Economica
+A014506,Egreso,Actividad Comercial,Actividad Economica
+A014508,Egreso,Actividad Comercial,Actividad Economica
+A014509,Egreso,Actividad Comercial,Actividad Economica
+A014511,Egreso,Actividad Comercial,Actividad Economica
+A014512,Ingreso,Actividad Comercial,Actividad Economica
+A014515,Egreso,Ahorro,INGRESO8
+A014539,Ingreso,Actividad Comercial,Actividad Economica
+A014576,Egreso,Ahorro,INGRESO9
+A014580,Ingreso,Actividad Comercial,Actividad Economica
+A014582,Ingreso,Ahorro,INGRESO5
+A014584,Ingreso,Ahorro,INGRESO6
+A014659,Ingreso,Ingreso,INGRESO10
+A014803,Ingreso,Ingreso,INGRESO2
+A014892,Ingreso,Ingreso,INGRESO1
+A014902,Ingreso,Ingreso,INGRESO2
+A014907,Ingreso,Ingreso,INGRESO3
+A014938,Ingreso,Actividad Comercial,Actividad Economica
+A014974,Ingreso,Ingreso,INGRESO3
+A015027,Ingreso,Ingreso,INGRESO4
+A015093,Ingreso,Ingreso,INGRESO4
+A015149,Egreso,Ahorro,INGRESO10
+A015152,Ingreso,Actividad Comercial,Actividad Economica
+A015181,Ingreso,Ahorro,INGRESO7
+A015228,Ingreso,Ingreso,INGRESO5
+A015330,Ingreso,Ingreso,INGRESO6
+A015409,Ingreso,Ingreso,INGRESO7
+A015450,Ingreso,Ingreso,INGRESO8
+A015479,Ingreso,Ingreso,INGRESO9
+A015498,Ingreso,Ingreso,INGRESO1
+A015534,Ingreso,Ingreso,INGRESO10
+A015607,Ingreso,Ingreso,INGRESO1
+A015720,Ingreso,Ingreso,INGRESO2
+A015775,Ingreso,Ingreso,INGRESO3
+A015798,Ingreso,Ingreso,INGRESO4
+A015811,Ingreso,Actividad Comercial,Actividad Economica
+A015847,Ingreso,Ingreso,INGRESO5
+A015956,Ingreso,Ingreso,INGRESO6
+A016041,Ingreso,Ingreso,INGRESO7
+A016122,Ingreso,Ingreso,INGRESO8
+A016178,Ingreso,Ingreso,INGRESO9
+A016212,Ingreso,Ingreso,INGRESO10
+A016276,Ingreso,Ingreso,INGRESO1
+A016296,Ingreso,Ingreso,INGRESO2

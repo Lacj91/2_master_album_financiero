@@ -1,0 +1,15 @@
+"razon_uso","tipo_razon_uso"
+P.RECREACION,especifico
+SUSCRIPCION,regular
+P.VIAJE,especifico
+RECREACION,regular
+HOGAR,regular
+TRANSPORTE,regular
+P.FORMAL,especifico
+NECESIDAD,regular
+P.MANUAL,especifico
+DINERO,dinero
+INGRESO,dinero
+P.SALUD,especifico
+P.GUSTOS,especifico
+LIBRE,regular

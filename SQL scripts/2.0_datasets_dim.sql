@@ -60,11 +60,14 @@ ON album_financiero.dim_razon_uso (razon_uso);
 
 --CSV019  dim_nombre
 CREATE MATERIALIZED VIEW album_financiero.dim_nombre AS
-SELECT DISTINCT nombre,
-    (SELECT string_agg(LEFT(word, 2), '')
-     FROM regexp_split_to_table(nombre, '\s+') AS word
-    )                                          AS nombre_abr
-FROM album_financiero.v_ds_nombre
+SELECT DISTINCT
+    nombre,
+    ( SELECT string_agg(
+                   LEFT(word, 1) || RIGHT(word, 2),
+                   '')
+        FROM regexp_split_to_table(nombre, '\s+') AS word
+    ) AS nombre_abr
+FROM album_financiero.v_ds_nombre;
 ORDER BY nombre ASC;
 
 CREATE UNIQUE INDEX pk_dim_nombre
@@ -105,11 +108,14 @@ ON album_financiero.dim_tipo_credito (tipo_credito);
 
 --CSV029  dim_deuda_nombre
 CREATE MATERIALIZED VIEW album_financiero.dim_deuda_nombre AS
-SELECT DISTINCT nombre_deudor,
-    (SELECT string_agg(LEFT(word, 2), '')
-     FROM regexp_split_to_table(nombre_deudor, '\s+') AS word
-    )                                          AS nombre_abr
-FROM album_financiero.v_ds_deuda_id
+SELECT DISTINCT
+    nombre_deudor,
+    ( SELECT string_agg(
+                   LEFT(word, 1) || RIGHT(word, 2),
+                   '')
+        FROM regexp_split_to_table(nombre_deudor, '\s+') AS word
+    ) AS nombre_abr
+FROM  album_financiero.v_ds_deuda_id
 ORDER BY nombre_deudor ASC;
 
 CREATE UNIQUE INDEX pk_dim_deuda_nombre

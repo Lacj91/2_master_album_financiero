@@ -1,0 +1,1288 @@
+﻿dax_nombre,dax_medicion,
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Monto Presupuestado,[Presupuesto Especifico] + [Presupuesto Regular],
+Presupuesto Especifico,"CALCULATE(
+    SUM( fact_presupuesto[monto_presupuesto] ),
+    fact_presupuesto[id_presupuesto] <> BLANK(),
+    TREATAS(
+        VALUES( Calendario[Fecha] ),
+        fact_presupuesto[inicio_mes]
+    )
+)",
+Presupuesto Regular,"CALCULATE(
+    SUM(ds_presupuesto_mensual_regular_dinero[monto_presupuesto]),
+    KEEPFILTERS(ds_presupuesto_mensual_regular_dinero[tipo_razon_uso] = ""regular"")
+)",
+Restante para gastar,[Monto Presupuestado] - [Monto Gastado],
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Monto Presupuestado,[Presupuesto Especifico] + [Presupuesto Regular],
+% Presupuesto,"VAR Presup = [Monto Presupuestado]
+VAR Gastado = [Monto Gastado]
+RETURN
+IF(
+    Presup = 0 || ISBLANK(Presup),
+    BLANK(),
+    DIVIDE(Gastado, Presup)
+)",
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Monto Presupuestado,[Presupuesto Especifico] + [Presupuesto Regular],
+% Monto Gastado,"DIVIDE(
+    [Monto Gastado],
+    CALCULATE(
+        [Monto Gastado],
+        REMOVEFILTERS( dim_clave[clave] )
+    )
+)",
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+% Monto Gastado,"DIVIDE(
+    [Monto Gastado],
+    CALCULATE(
+        [Monto Gastado],
+        REMOVEFILTERS( dim_clave[clave] )
+    )
+)",
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+Presupuesto Especifico,"CALCULATE(
+    SUM( fact_presupuesto[monto_presupuesto] ),
+    fact_presupuesto[id_presupuesto] <> BLANK(),
+    TREATAS(
+        VALUES( Calendario[Fecha] ),
+        fact_presupuesto[inicio_mes]
+    )
+)",
+Restante para gastar por ID,[Presupuesto Especifico] - [Monto Gastado por ID],
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+Presupuesto Especifico,"CALCULATE(
+    SUM( fact_presupuesto[monto_presupuesto] ),
+    fact_presupuesto[id_presupuesto] <> BLANK(),
+    TREATAS(
+        VALUES( Calendario[Fecha] ),
+        fact_presupuesto[inicio_mes]
+    )
+)",
+% Presupuesto Especifico,"VAR Presup = [Presupuesto Especifico]
+VAR Gastado = [Monto Gastado por ID]
+RETURN
+IF(
+    Presup = 0 || ISBLANK(Presup),
+    BLANK(),
+    DIVIDE(Gastado, Presup)
+)",
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+Monto Presupuestado,[Presupuesto Especifico] + [Presupuesto Regular],
+id_presupuesto_descripcion,"dim_id_presupuesto'[id_presupuesto] & "" - "" & 'dim_id_presupuesto'[descripcion]",
+Mostrar Presupuesto en Periodo,"VAR _minFecha = MIN ( Calendario[Fecha] )
+VAR _maxFecha = MAX ( Calendario[Fecha] )
+RETURN
+IF (
+    CALCULATE (
+        COUNTROWS ( fact_presupuesto ),
+        REMOVEFILTERS ( fact_c_diaria ),
+        fact_presupuesto[inicio_mes] <= _maxFecha,
+        fact_presupuesto[final_mes] >= _minFecha
+    ) > 0,
+    1,
+)",
+% Monto Gastado por ID,"DIVIDE(
+    [Monto Gastado por ID],
+    CALCULATE(
+        [Monto Gastado por ID],
+        REMOVEFILTERS( dim_id_presupuesto[id_presupuesto] )
+    )
+)",
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+% Monto Gastado por ID,"DIVIDE(
+    [Monto Gastado por ID],
+    CALCULATE(
+        [Monto Gastado por ID],
+        REMOVEFILTERS( dim_id_presupuesto[id_presupuesto] )
+    )
+)",
+mes,"FORMAT ( fact_presupuesto[inicio_mes], ""MMM yy"" )",
+mes_continuo,"VAR Base =
+    MINX (
+        ALL ( fact_presupuesto ),
+        YEAR ( fact_presupuesto[inicio_mes] ) * 12
+        + MONTH ( fact_presupuesto[inicio_mes] )
+    )
+RETURN
+    YEAR ( fact_presupuesto[inicio_mes] ) * 12
+    + MONTH ( fact_presupuesto[inicio_mes] )
+    - Base
+    + 1",
+Mostrar Presupuesto en Periodo,"VAR _minFecha = MIN ( Calendario[Fecha] )
+VAR _maxFecha = MAX ( Calendario[Fecha] )
+RETURN
+IF (
+    CALCULATE (
+        COUNTROWS ( fact_presupuesto ),
+        REMOVEFILTERS ( fact_c_diaria ),
+        fact_presupuesto[inicio_mes] <= _maxFecha,
+        fact_presupuesto[final_mes] >= _minFecha
+    ) > 0,
+    1,
+)",
+Monto Gastado por ID,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        TREATAS( VALUES( ds_presupuesto_aplicado[id] ), fact_c_diaria[id] ),
+        ds_presupuesto_aplicado[tipo_razon_uso] = ""especifico""
+    )",
+Total Creditos,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    FILTER(
+        ds_creditos_periodo,
+        ds_creditos_periodo[primer_dia_mes_corte] IN
+            VALUES( fact_creditos[primer_dia_mes_corte] )
+    )
+)",
+Total Creditos,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    FILTER(
+        ds_creditos_periodo,
+        ds_creditos_periodo[primer_dia_mes_corte] IN
+            VALUES( fact_creditos[primer_dia_mes_corte] )
+    )
+)",
+Total Creditos,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    FILTER(
+        ds_creditos_periodo,
+        ds_creditos_periodo[primer_dia_mes_corte] IN
+            VALUES( fact_creditos[primer_dia_mes_corte] )
+    )
+)",
+% Monto Gastado por Credito,"DIVIDE(
+    [Total Creditos],
+    CALCULATE(
+        [Total Creditos],
+        REMOVEFILTERS( dim_clave[clave] )
+    )
+)",
+Mostrar Tipo Credito,"VAR FechaInicio = MIN( fact_creditos[fecha_inicio] )
+VAR FechaCorte  = MAX( fact_creditos[fecha_corte] )
+VAR Fecha       = SELECTEDVALUE( fact_c_diaria[fecha] )
+-- Get selected credit type(s)
+VAR SelectedTipo =
+    CALCULATETABLE(
+        VALUES( dim_tipo_credito[tipo_credito] ),
+        ALLSELECTED( dim_tipo_credito[tipo_credito] )
+    )
+-- Find the corresponding tipo_credito for the current row in fact_c_diaria
+VAR TipoCreditoRow =
+    CALCULATE(
+        SELECTEDVALUE( ds_creditos_periodo[tipo_credito] ),
+        TREATAS( VALUES( fact_c_diaria[id] ), ds_creditos_periodo[id] )
+    )
+RETURN
+IF(
+    NOT ISBLANK(Fecha) &&
+    Fecha >= FechaInicio &&
+    Fecha <= FechaCorte &&
+    CONTAINSROW( SelectedTipo, TipoCreditoRow ),
+)",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+% Monto Gastado en Terceros por Nombre,"DIVIDE(
+    [Total Terceros],
+    CALCULATE(
+        [Total Terceros],
+        REMOVEFILTERS( dim_nombre[nombre_abr] )
+    )
+)",
+nombre_con_abr,"dim_nombre[nombre] & "" ("" & dim_nombre[nombre_abr] & "")""",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+% Monto Gastado en Terceros,"DIVIDE(
+    [Total Terceros],
+    CALCULATE(
+        [Total Terceros],
+        REMOVEFILTERS( dim_nombre_clave[clave] )
+    )
+)",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+% Deuda,"VAR DeudaGastado    = ABS([Deuda (<0)])   -- How much you lent
+VAR DeudaLiquidado  = [Deuda (>0)]        -- How much they paid you back
+RETURN
+IF(
+    ISBLANK(DeudaGastado) || DeudaGastado = 0 || 
+    ISBLANK(DeudaLiquidado) || DeudaLiquidado = 0,
+    0,
+    DIVIDE(DeudaLiquidado, DeudaGastado)
+)",
+Deuda (<0),"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] ),
+    fact_c_diaria[monto] < 0
+)",
+Deuda (>0),"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] ),
+    fact_c_diaria[monto] > 0
+)",
+deudor_con_abr,"dim_deuda_nombre[nombre_deudor] & "" ("" & dim_deuda_nombre[nombre_abr] & "")""",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+% Monto Gastado en Deuda por Nombre,"DIVIDE(
+    [Total Deuda],
+    CALCULATE(
+        [Total Deuda],
+        REMOVEFILTERS( dim_deuda_nombre[nombre_abr] )
+    )
+)",
+Id_deuda_descripcion,"ds_deuda_id'[id_deuda] & "" - "" & RELATED(dim_id_deuda[descripcion])",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+% Monto Gastado en Id Deuda,"DIVIDE(
+    [Total Deuda],
+    CALCULATE(
+        [Total Deuda],
+        REMOVEFILTERS( dim_id_deuda[id_deuda] )
+    )
+)",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+% Ingreso Operativo por Tipo,"DIVIDE(
+    [Total Ingreso Operativo],
+    CALCULATE(
+        [Total Ingreso Operativo],
+        ALL( dim_ingresos[tipo_ingreso] )
+    )
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+% Ingreso Operativo por Tipo,"DIVIDE(
+    [Total Ingreso Operativo],
+    CALCULATE(
+        [Total Ingreso Operativo],
+        ALL( dim_ingresos[tipo_ingreso] )
+    )
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+% Ingreso Operativo por canal de ingreso,"DIVIDE(
+    [Magnitud Ingreso Operativo],
+    CALCULATE(
+        [Magnitud Ingreso Operativo],
+        ALL( dim_canal_ingreso )
+    )
+)",
+Magnitud Ingreso Operativo,"ABS(
+    CALCULATE(
+        SUM( fact_c_diaria[monto] ),
+        TREATAS(
+            VALUES( ds_ingresos[id] ),
+            fact_c_diaria[id]
+        ),
+        TREATAS(
+            VALUES( dim_canal_ingreso[canal_ingreso] ),
+            ds_ingresos[canal_ingreso]
+        ),
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+ID Viaje Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+grupo_viaje_con_descripcion,"dim_viajes_grupo[grupo_viaje] & "" - "" & dim_viajes_grupo[viaje_principal] ",
+ID Viaje Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Id_viaje_con_descripcion,"dim_id_viajes[id_viaje] & "" - "" & dim_id_viajes[descripcion] ",
+ID Viaje Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+ID Viaje Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Ubicacion Seleccionada,"SELECTEDVALUE (
+    dim_geografia[ubicacion_completa],
+    ""Multiples ubicaciones seleccionadas""
+)",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+% Total Gastado en el pais,"DIVIDE(
+    [Total Gastado en el pais],
+    [Total Viaje ID]
+)",
+% Total moneda extranjera,"DIVIDE(
+    [Total Gastado en el Extranjero],
+    [Total Viaje ID]
+)",
+Total Gastado en el pais,[Total Viaje ID] - [Total Gastado en el Extranjero],
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+Viaje visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+% Magnitud Gastado Viaje ID,"VAR TotalViaje =
+    CALCULATE(
+        [Magnitud Gastado Viaje ID],
+        ALLSELECTED( fact_c_diaria[clave] )
+    )
+RETURN
+    DIVIDE(
+        [Magnitud Gastado Viaje ID],
+        TotalViaje
+    )",
+Magnitud Gastado Viaje ID,"ABS(
+    CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )
+)",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+Viaje visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_id )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+% Monto Gastado en Viaje ID,"DIVIDE(
+    [Total Viaje ID],
+    CALCULATE(
+        [Total Viaje ID],
+        REMOVEFILTERS( dim_id_viajes[id_viaje] )
+    )
+)",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+ID Viaje Visible para Tipo de Cambio,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_tipo_cambio )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+% Magnitud Gastado en Moneda Extranjera,"VAR TotalViaje =
+    CALCULATE(
+        [Magnitud Gastado en Moneda Extranjera],
+        ALLSELECTED( fact_c_diaria[clave] )
+    )
+RETURN
+    DIVIDE(
+        [Magnitud Gastado en Moneda Extranjera],
+        TotalViaje
+    )",
+Magnitud Gastado en Moneda Extranjera,"ABS(   
+    CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )
+ )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+ID Viaje Visible para Tipo de Cambio,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_tipo_cambio )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Leyenda Tipo Cambio,"IF (
+    COUNTROWS ( VALUES ( ds_viaje_tipo_cambio[moneda] ) ) > 1,
+    ""Multiples monedas seleccionadas"",
+    BLANK()
+)",
+Total Gastado en la Moneda Extranjera,"VAR MonedasVisibles =
+    VALUES ( ds_viaje_tipo_cambio[moneda] )
+RETURN
+    IF (
+        COUNTROWS ( MonedasVisibles ) = 1,
+        SUMX (
+            ds_viaje_tipo_cambio,
+            RELATED ( fact_c_diaria[monto] )
+                / ds_viaje_tipo_cambio[tipo_cambio]
+        ),
+        BLANK ()
+    )",
+Promedio Tipo Cambio,"VAR MonedasVisibles =
+    VALUES ( ds_viaje_tipo_cambio[moneda] )
+RETURN
+    IF (
+        COUNTROWS ( MonedasVisibles ) = 1,
+        AVERAGE ( ds_viaje_tipo_cambio[tipo_cambio] ),
+        BLANK ()
+    )",
+ID Viaje Visible para Tipo de Cambio,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_tipo_cambio )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+% Monto Gastado en Viaje ID en el Extranjero,"DIVIDE(
+    [Total Gastado en el Extranjero],
+    CALCULATE(
+        [Total Gastado en el Extranjero],
+        REMOVEFILTERS( dim_id_viajes[id_viaje] )
+    )
+)",
+Total Gastado en la Moneda Extranjera,"VAR MonedasVisibles =
+    VALUES ( ds_viaje_tipo_cambio[moneda] )
+RETURN
+    IF (
+        COUNTROWS ( MonedasVisibles ) = 1,
+        SUMX (
+            ds_viaje_tipo_cambio,
+            RELATED ( fact_c_diaria[monto] )
+                / ds_viaje_tipo_cambio[tipo_cambio]
+        ),
+        BLANK ()
+    )",
+Total Gastado en el Extranjero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_tipo_cambio[id] ), fact_c_diaria[id] )
+    )",
+Total Gastado en la Moneda Extranjera,"VAR MonedasVisibles =
+    VALUES ( ds_viaje_tipo_cambio[moneda] )
+RETURN
+    IF (
+        COUNTROWS ( MonedasVisibles ) = 1,
+        SUMX (
+            ds_viaje_tipo_cambio,
+            RELATED ( fact_c_diaria[monto] )
+                / ds_viaje_tipo_cambio[tipo_cambio]
+        ),
+        BLANK ()
+    )",
+ID Viaje Visible para Tipo de Cambio,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( ds_viaje_tipo_cambio )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Depositos Inversiones y Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[categoria_movimiento] = ""deposito""
+            &&
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+    )
+)",
+Retiros Inversiones y Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+            &&
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+    )
+)",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Balance Final en inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( fact_inversiones[monto] ),
+        LASTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( fact_inversiones ) )
+        )
+    )
+)",
+Tipo Inversion Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( fact_inversiones )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Balance Final en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( fact_inversiones[monto] ),
+        LASTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( fact_inversiones ) )
+        )
+    )
+)",
+Balance Inicial en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( ds_inversiones_impacto[balance_inicial] ),
+        FIRSTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( ds_inversiones_impacto ) )
+        )
+    )
+)",
+Balance Inicial en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( ds_inversiones_impacto[balance_inicial] ),
+        FIRSTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( ds_inversiones_impacto ) )
+        )
+    )
+)",
+Balance Final en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( fact_inversiones[monto] ),
+        LASTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( fact_inversiones ) )
+        )
+    )
+)",
+Balance Inicial en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( ds_inversiones_impacto[balance_inicial] ),
+        FIRSTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( ds_inversiones_impacto ) )
+        )
+    )
+)",
+Balance Final en Inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( fact_inversiones[monto] ),
+        LASTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( fact_inversiones ) )
+        )
+    )
+)",
+Diferencia de Balances,[Balance Final en Inversiones] - [Balance Inicial en inversiones],
+Balance Cambio % con Flecha,"VAR Valor = [Diferencia de Balances en %]
+RETURN
+IF (
+    ISBLANK ( Valor ),
+    BLANK (),
+    IF (
+        Valor > 0,
+        ""?? "" & FORMAT ( Valor, ""0.00%"" ),
+        IF (
+            Valor < 0,
+            ""?? "" & FORMAT ( Valor, ""0.00%"" ),
+            ""?? "" & FORMAT ( Valor, ""0.00%"" )
+        )
+    )
+)",
+Diferencia de Balances en %,"VAR BalanceInicial = [Balance Inicial en inversiones]
+VAR BalanceFinal   = [Balance Final en Inversiones]
+RETURN
+IF(
+    NOT ISBLANK(BalanceInicial) && BalanceInicial <> 0,
+    DIVIDE(BalanceFinal - BalanceInicial, BalanceInicial),
+    BLANK()
+)",
+% Valor Neto Inicial vs Resultado Neto,"DIVIDE(
+    [Valor Neto Generado Inicial],
+    [Resultado Neto de la Inversion]
+)",
+% Valor Neto Final vs Resultado Neto,"DIVIDE(
+    [Valor Neto Generado Final],
+    [Resultado Neto de la Inversion]
+)",
+% Valor Neto Inicial vs Resultado Neto,"DIVIDE(
+    [Valor Neto Generado Inicial],
+    [Resultado Neto de la Inversion]
+)",
+% Valor Neto Final vs Resultado Neto,"DIVIDE(
+    [Valor Neto Generado Final],
+    [Resultado Neto de la Inversion]
+)",
+Valor Neto Generado Inicial,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    VAR PrimeraFecha =
+        CALCULATE (
+            MIN ( fact_inversiones[fecha_monto] )
+        )
+    RETURN
+        CALCULATE (
+            MAX ( fact_inversiones[monto] ),
+            REMOVEFILTERS ( Calendario ),
+            fact_inversiones[fecha_monto] = PrimeraFecha
+        )
+)",
+Valor Neto Generado Final,[Resultado Neto de la Inversion] - [Valor Neto Generado Inicial],
+Resultado Neto de la Inversion,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    VAR UltimoMonto =
+        CALCULATE (
+            MAX ( fact_inversiones[monto] ),
+            LASTNONBLANK (
+                Calendario[Fecha],
+                CALCULATE ( COUNTROWS ( ds_inversiones_impacto ) )
+            )
+        )
+    VAR ImpactoMovimientos =
+        CALCULATE (
+            SUM ( ds_inversiones_impacto[impacto_por_movimiento] )
+        )
+    RETURN
+        UltimoMonto - ImpactoMovimientos
+)",
+Resultado Neto de la Inversion,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    VAR UltimoMonto =
+        CALCULATE (
+            MAX ( fact_inversiones[monto] ),
+            LASTNONBLANK (
+                Calendario[Fecha],
+                CALCULATE ( COUNTROWS ( ds_inversiones_impacto ) )
+            )
+        )
+    VAR ImpactoMovimientos =
+        CALCULATE (
+            SUM ( ds_inversiones_impacto[impacto_por_movimiento] )
+        )
+    RETURN
+        UltimoMonto - ImpactoMovimientos
+)",
+Balance Actual,"VAR FechaCorte =
+    MAX ( fact_c_diaria[fecha] )
+VAR Saldo =
+    CALCULATE(
+        SUM ( fact_c_diaria[monto] ),
+        fact_c_diaria[fecha] <= FechaCorte,
+        REMOVEFILTERS ( Calendario )
+    )
+RETURN
+IF ( ABS ( Saldo ) < 0.01, 0, Saldo )",
+Limite Credito,"SUMX (
+    FILTER (
+        fact_parametros,
+        NOT ISBLANK ( fact_parametros[limite_autoimpuesto] )
+    ),
+    fact_parametros[valor]
+)",
+Disponible Credito,[Limite Credito] + [Saldo Credito],
+Saldo Credito,"VAR FechaCorte =
+    MAX ( fact_c_diaria[fecha] )
+VAR Saldo =
+    CALCULATE(
+        SUM ( fact_c_diaria[monto] ),
+        REMOVEFILTERS ( Calendario ),
+        fact_c_diaria[fecha] <= FechaCorte,
+        fact_c_diaria[metodo_pago_general] = ""credito""
+    )
+RETURN
+IF ( ABS ( Saldo ) < 0.01, 0, Saldo )",
+Balance Final en inversiones,"SUMX (
+    VALUES ( dim_tipo_inversion[tipo_inversion] ),
+    CALCULATE (
+        MAX ( fact_inversiones[monto] ),
+        LASTNONBLANK (
+            Calendario[PrimerDiaMes],
+            CALCULATE ( COUNTROWS ( fact_inversiones ) )
+        )
+    )
+)",
+Resumen Pago Combinado,"VAR LineBreak = UNICHAR(10)
+VAR ForcedBlankLine = LineBreak & UNICHAR(8203) & LineBreak  -- zero-width space between breaks
+RETURN
+    [Estado Pago Credito Mes Actual] &
+    ForcedBlankLine &
+    [Monto Credito Mes Actual] &
+    ForcedBlankLine &
+    [Monto Credito Siguiente Mes]",
+Estado Pago Credito Mes Actual,"VAR IdCredito = [ID Monto a Pagar en el Mes Actual]
+VAR FechaLimite =
+    CALCULATE (
+        MAX ( fact_creditos[fecha_limite_pago] ),
+        REMOVEFILTERS ( fact_creditos ),
+        fact_creditos[id_creditos] = IdCredito
+    )
+VAR ListoParaPago =
+    LOWER (
+        CALCULATE (
+            MAX ( fact_creditos[listo_para_pago] ),
+            REMOVEFILTERS ( fact_creditos ),
+            fact_creditos[id_creditos] = IdCredito
+        )
+    )
+VAR PagoDetectado =
+    CALCULATE (
+        COUNTROWS ( fact_c_diaria ),
+        REMOVEFILTERS ( fact_c_diaria ),
+        fact_c_diaria[fecha] = FechaLimite,
+        fact_c_diaria[metodo_pago_general] = ""credito"",
+        fact_c_diaria[monto] > 0
+    )
+RETURN
+IF (
+    PagoDetectado > 0,
+    ""? Ya Pagado"",
+    IF (
+        ListoParaPago = ""si"",
+        ""?? Programado para Pago"",
+        ""?? Pendiente de Programar Pago""
+    )
+)",
+Monto Credito Mes Actual,"VAR CreditoActual = [ID Monto a Pagar en el Mes Actual]
+VAR FechaCorteCredito =
+    CALCULATE (
+        MAX ( fact_creditos[fecha_corte] ),
+        REMOVEFILTERS ( fact_creditos ),
+        fact_creditos[id_creditos] = CreditoActual
+    )
+VAR FechaLimitePago =
+    CALCULATE (
+        MAX ( fact_creditos[fecha_limite_pago] ),
+        REMOVEFILTERS ( fact_creditos ),
+        fact_creditos[id_creditos] = CreditoActual
+    )
+RETURN ""Monto a liquidar: "" &
+FORMAT( 
+    CALCULATE (
+    SUM ( fact_c_diaria[monto] ),
+    ds_creditos_periodo[id_creditos] = CreditoActual,
+    ds_creditos_periodo[tipo_credito] = ""gasto"",
+    fact_c_diaria[metodo_pago_general] = ""credito"",
+    fact_c_diaria[fecha] <= FechaCorteCredito
+    ), 
+$#,##0.00) & UNICHAR(10) &
+Fecha limite:  & FORMAT(FechaLimitePago, ""dd/mm/yyyy"")",
+ID Monto a Pagar en el Mes Actual,"VAR AnioActual = YEAR ( TODAY() )
+VAR MesActual = MONTH ( TODAY() )
+RETURN
+CALCULATE (
+    SELECTEDVALUE ( fact_creditos[id_creditos] ),
+    REMOVEFILTERS ( fact_creditos ),
+    YEAR ( fact_creditos[fecha_corte] ) = AnioActual,
+    MONTH ( fact_creditos[fecha_corte] ) = MesActual
+)",
+Monto Credito Siguiente Mes,"VAR IdSiguiente = [ID Monto a Pagar en el Siguiente Mes]
+VAR FechaInicio =
+    CALCULATE (
+        MIN ( fact_creditos[fecha_inicio] ),
+        REMOVEFILTERS ( fact_creditos ),
+        fact_creditos[id_creditos] = IdSiguiente
+    )
+VAR FinMesActual =
+    EOMONTH ( TODAY(), 0 )
+RETURN ""Acumulado siguiente pago: "" & FORMAT(
+CALCULATE (
+    SUM ( fact_c_diaria[monto] ),
+    ds_creditos_periodo[id_creditos] = IdSiguiente,
+    ds_creditos_periodo[tipo_credito] = ""gasto"",
+    fact_c_diaria[metodo_pago_general] = ""credito"",
+    fact_c_diaria[fecha] >= FechaInicio,
+    fact_c_diaria[fecha] <= FinMesActual
+), ""$#,##0.00"")",
+ID Monto a Pagar en el Siguiente Mes,"VAR IdActual = [ID Monto a Pagar en el Mes Actual] 
+RETURN 
+CALCULATE ( 
+    MIN ( fact_creditos[id_creditos] ), 
+    REMOVEFILTERS ( fact_creditos ), 
+    fact_creditos[id_creditos] > IdActual 
+)",
+% Presupuesto Mes Actual,"VAR Presup = [Presupuesto Total Mes Actual]
+VAR Gastado = [Monto Gastado Mes Actual]
+RETURN
+IF(
+    Presup = 0 || ISBLANK(Presup),
+    BLANK(),
+    DIVIDE(Gastado, Presup)
+)",
+Presupuesto Total Mes Actual,[Presupuesto Especifico Mes Actual] + [Presupuesto Regular Mes Actual],
+Presupuesto Especifico Mes Actual,"VAR InicioMesActual = DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )
+VAR FinMesActual = EOMONTH ( InicioMesActual, 0 )
+RETURN
+CALCULATE (
+    SUM ( fact_presupuesto[monto_presupuesto] ),
+    TREATAS (
+        VALUES ( ds_presupuesto_mensual_especifico[id_presupuesto_mensual] ),
+        fact_presupuesto[id_presupuesto_mensual]
+    ),
+    TREATAS (
+        DATESBETWEEN (
+            Calendario[Fecha],
+            InicioMesActual,
+            FinMesActual
+        ),
+        fact_presupuesto[inicio_mes]
+    )
+)",
+Presupuesto Regular Mes Actual,"VAR InicioMesActual = DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )
+VAR FinMesActual = EOMONTH ( InicioMesActual, 0 )
+RETURN
+CALCULATE (
+    SUM ( ds_presupuesto_mensual_regular_dinero[monto_presupuesto] ),
+    KEEPFILTERS (
+        ds_presupuesto_mensual_regular_dinero[tipo_razon_uso] = ""regular""
+    ),
+    REMOVEFILTERS ( Calendario ),
+    Calendario[Fecha] >= InicioMesActual,
+    Calendario[Fecha] <= FinMesActual
+)",
+Monto Gastado Mes Actual,"VAR InicioMesActual = DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )
+VAR FinMesActual = EOMONTH ( InicioMesActual, 0 )
+RETURN
+CALCULATE (
+    SUM ( fact_c_diaria[monto] ),
+    KEEPFILTERS ( dim_razon_uso[razon_uso] <> ""DINERO"" ),
+    KEEPFILTERS ( dim_razon_uso[razon_uso] <> ""INGRESO"" ),
+    REMOVEFILTERS ( Calendario ),
+    Calendario[Fecha] >= InicioMesActual,
+    Calendario[Fecha] <= FinMesActual
+)",
+Meses y Dias Sostenibilidad (con Fecha),"VAR MesesDec = [Meses de Sostenibilidad]
+VAR MesesEnteros = INT ( MesesDec )
+VAR Dias = ROUND ( ( MesesDec - MesesEnteros ) * 30, 0 )
+VAR FechaIntermedia = EDATE ( TODAY (), MesesEnteros )
+VAR FechaMax = FechaIntermedia + Dias
+VAR MesNombre =
+    CALCULATE (
+        SELECTEDVALUE ( Calendario[Mes] ),
+        Calendario[Fecha] = FechaMax
+    )
+VAR Anio =
+    CALCULATE (
+        SELECTEDVALUE ( Calendario[Año] ),
+        Calendario[Fecha] = FechaMax
+    )
+VAR FechaFormateada =
+    FORMAT ( FechaMax, ""dd"" ) & "" / "" &
+    MesNombre & "" / "" &
+    FORMAT ( Anio, ""0"" )
+RETURN
+FORMAT ( MesesEnteros, ""0"" ) & "" meses y "" &
+FORMAT ( Dias, ""0"" ) & "" días"" & UNICHAR ( 10 ) &
+Fecha Máxima:  & FechaFormateada",
+Meses de Sostenibilidad,"DIVIDE(
+    ([Total Inversiones Disponibles] + [Balance Actual]) + [Total Presupuesto Especifico],
+    - [Total Presupuesto Regular]
+)",
+Total Inversiones Disponibles,"VAR FechaCorte =
+    MAX ( fact_inversiones[fecha_monto] )
+RETURN
+CALCULATE (
+    SUM ( fact_inversiones[monto] ),
+    REMOVEFILTERS ( Calendario ),
+    fact_inversiones[fecha_monto] = FechaCorte,
+    dim_tipo_inversion[tipo_acceso] = ""disponible""
+)",
+Balance Actual,"VAR FechaCorte =
+    MAX ( fact_c_diaria[fecha] )
+VAR Saldo =
+    CALCULATE(
+        SUM ( fact_c_diaria[monto] ),
+        fact_c_diaria[fecha] <= FechaCorte,
+        REMOVEFILTERS ( Calendario )
+    )
+RETURN
+IF ( ABS ( Saldo ) < 0.01, 0, Saldo )",
+Total Presupuesto Especifico,"VAR MesActual =
+    DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )
+RETURN
+CALCULATE (
+    SUM ( fact_presupuesto[monto_presupuesto] ),
+    FILTER (
+        ds_presupuesto_mensual_especifico,
+            ds_presupuesto_mensual_especifico[inicio_mes] >= MesActual
+    )
+)",
+Total Presupuesto Regular,"VAR MesActual =
+    DATE ( YEAR ( TODAY() ), MONTH ( TODAY() ), 1 )
+RETURN
+CALCULATE (
+    SUM ( fact_presupuesto[monto_presupuesto] ),
+    FILTER (
+        fact_presupuesto,
+            fact_presupuesto[inicio_mes] >= MesActual
+            && ISBLANK ( fact_presupuesto[id_presupuesto] )
+    )
+)",
+Total Ingreso,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        fact_c_diaria[monto] > 0,
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+)",
+Total Gastado,"ABS(
+    CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        fact_c_diaria[monto] < 0,
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+    )
+)",
+Total Ingreso,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        fact_c_diaria[monto] > 0,
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+)",
+Total Gastado,"ABS(
+    CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        fact_c_diaria[monto] < 0,
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+    )
+)",
+Total Neto,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+)",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+Total Inversiones Monedero,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS(
+        VALUES( ds_inversiones_movimientos[id] ),
+        fact_c_diaria[id]
+    ),
+    FILTER(
+        ds_inversiones_movimientos,
+        ds_inversiones_movimientos[tipo_inversion_detectado] <> ""PLS""
+            &&
+        (
+            ds_inversiones_movimientos[tipo_inversion_detectado] <> ""Monedero""
+            || ds_inversiones_movimientos[categoria_movimiento] = ""retiro""
+        )
+    )
+)",
+Monto Gastado,"CALCULATE(
+    SUM(fact_c_diaria[monto]),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""DINERO""),
+        KEEPFILTERS(dim_razon_uso[razon_uso] <> ""INGRESO"")
+)",
+Total Ingreso Operativo,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_ingresos[id] ), fact_c_diaria[id] ),
+    FILTER(
+        ds_ingresos,
+        ds_ingresos[tipo_ingreso] <> ""Monedero""
+    )
+)",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+Total Terceros,"CALCULATE(
+  SUM( fact_c_diaria[monto] ),
+  TREATAS( VALUES( ds_nombre[id] ), fact_c_diaria[id] )
+)",
+Total Deuda,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_deuda_id[id] ), fact_c_diaria[id] )
+    )",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+Total Viaje ID,"CALCULATE(
+    SUM( fact_c_diaria[monto] ),
+    TREATAS( VALUES( ds_viaje_id[id] ), fact_c_diaria[id] )
+    )",
+Total Cuentas Diarias,SUM(fact_c_diaria[monto]),
+Total Neto,"CALCULATE(
+        SUM(fact_c_diaria[monto]),
+        NOT (
+            fact_c_diaria[razon_uso] = ""DINERO"" &&
+            fact_c_diaria[clave] = ""transaccion""
+        )
+)",
+Total DINERO y Transaccion,"CALCULATE (
+    SUM ( fact_c_diaria[monto] ),
+    fact_c_diaria[razon_uso] = ""DINERO"",
+    fact_c_diaria[clave] = ""transaccion""
+)",
+Total Cuentas Diarias,SUM(fact_c_diaria[monto]),
+Total Cuentas Diarias,SUM(fact_c_diaria[monto]),
+% Magnitud Cuentas Diarias,"VAR TotalMagnitud =
+    CALCULATE (
+        [Magnitud Cuentas Diarias],
+        ALLSELECTED ( fact_c_diaria[clave] )
+    )
+RETURN
+    DIVIDE (
+        [Magnitud Cuentas Diarias],
+        TotalMagnitud
+    )",
+Magnitud Cuentas Diarias,"SUMX (
+    fact_c_diaria,
+    ABS ( fact_c_diaria[monto] )
+)",
+Total Cuentas Diarias,SUM(fact_c_diaria[monto]),
+Total Cuentas Diarias,SUM(fact_c_diaria[monto]),
+Cuentas Diarias Visible,"VAR TieneMovimientos =
+    CALCULATE(
+        COUNTROWS( fact_c_diaria )
+    )
+RETURN
+    IF( TieneMovimientos > 0, 1 )",
+Ultima Actualizacion,"FORMAT (
+    MAX ( refresh_info[refresh_info] ),
+    ""yyyy-MM-dd HH:mm""
+)",

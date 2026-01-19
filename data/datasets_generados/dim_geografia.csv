@@ -1,0 +1,45 @@
+id_geografia,ubicacion_viajes,continente,pais,estado_region,moneda,latitud,longitud
+1,Sibiu,Europa,Rumania,Transylvania,Euro,45.803075629278,24.148417029519
+2,Londres,Europa,Inglaterra,Gran Londres,Euro,51.501686805761,-0.118137889157
+3,Pahuatlan,Norte America,Mexico,Puebla,Dolar Americano,20.276782604562,-98.151802365352
+4,Beijing,Asia,China,Beijing,Yen Japones,39.918408121461,116.417984451526
+5,Morella,Europa,España,Castellon,Euro,40.620353702367,-0.102708097742
+6,Bogota,SudAmerica,Colombia,Bogota,Peso Chileno,4.712607886201,-74.068005167277
+7,Maracaibo,SudAmerica,Venezuela,Zulia,Peso Chileno,10.642274732459,-71.598002433785
+8,Villa de Leyva,SudAmerica,Colombia,Boyaca,Peso Chileno,5.636456701852,-73.526715318936
+9,Andorra La Vella,Europa,Andorra,AD500,Euro,42.506698152942,1.522167924101
+10,Napoles,Europa,Italia,Napoles,Euro,40.851477186345,14.269093202656
+11,Amsterdam,Europa,Paises Bajos,Holanda,Euro,52.366711521753,4.910125347208
+12,Medellin,SudAmerica,Colombia,Antioquia,Peso Chileno,6.247951187017,-75.558558064328
+13,Tokio,Asia,Japon,Kanto,Yen Japones,35.725343441325,139.993776730070
+14,Athenas,Europa,Grecia,Atica,Euro,37.988914406626,23.730094848621
+15,Estambul,Europa,Turquia,Marmara,Euro,41.011648721154,28.967970586103
+16,Perth,Oceania,Australia,Australia Occidental,Yen Japones,-31.945178862024,115.832135174676
+17,Cadiz,Europa,España,Andalucia,Euro,36.521207836481,-6.281610055044
+18,Seattle,Norte America,Estados Unidos de America,Washigton,Dolar Americano,47.609059922211,-122.338441006503
+19,Malaga,Europa,España,Andalucia,Euro,36.709937086615,-4.447211795379
+20,Cranston,Norte America,Estados Unidos de America,Rhode Island,Dolar Americano,41.780126872832,-71.436219450773
+21,Buenos Aires,SudAmerica,Argentina,Gran Buenos Aires,Peso Chileno,-34.603279854259,-58.379758789446
+22,Guayaquil,SudAmerica,Ecuador,Guayas,Peso Chileno,-2.186799965699,-79.886740566573
+23,Santander,Europa,España,Cantabria,Euro,43.463455142767,-3.821609496232
+24,Izmir,Europa,Turquia,Esmirna,Euro,38.420249565739,27.142869538561
+25,Varsovia,Europa,Polonia,Varsovia,Euro,52.231701708340,20.991323103111
+26,Houston,Norte America,Estados Unidos de America,Texas,Dolar Americano,29.755838918502,-95.354156868250
+27,Berlin,Europa,Alemania,Berlin,Euro,52.520593953401,13.386221162926
+28,San Salvador,Centro America,El Salvador,San Salvador,Dolar Americano,13.699146712383,-89.194825485132
+29,Ecatepec,Norte America,Mexico,Estado de Mexico,Dolar Americano,19.570222867914,-99.042060086947
+30,Amberes,Europa,Belgica,Amberes,Euro,51.219101711896,4.412744260661
+31,Surat,Asia,India,Gujarat,Yen Japones,21.180890791813,72.833249929717
+32,Bangkok,Asia,Tailandia,Nakhon Pathom Pathum Thani Nonthaburi Samut Prakan Samut Sakhon,Yen Japones,13.777738291051,100.506674722987
+33,Vancouver,Norte America,Canada,Columbia Britanica,Dolar Americano,49.275404691406,-123.105025231955
+34,Montevideo,SudAmerica,Uruguay,Montevideo,Peso Chileno,-34.904195135628,-56.175517575201
+35,Cairo,Africa,Egipto,El Cairo,Yen Japones,30.047753123037,31.238861731505
+36,Busan,Asia,Corea del Sur,Gyeongsang,Yen Japones,35.193107672575,129.125593427716
+37,Viena,Europa,Austria,Viena,Euro,48.206846369468,16.376879705939
+38,Lima,SudAmerica,Peru,Lima,Peso Chileno,-12.049277386174,-77.044176315037
+39,Ciudad de Oklahoma,Norte America,Estados Unidos de America,Oklahoma,Dolar Americano,35.470044061242,-97.528712403994
+40,Punta Cana,Caribe,Republica Dominicana,La Española,Dolar Americano,18.553635258867,-68.369528624664
+41,Merida,Norte America,Mexico,Yucatan,Dolar Americano,20.970024397866,-89.583225170250
+42,Cape Town,Africa,Sudafrica,Cabo Occidental,Yen Japones,-33.922896931386,18.455256208373
+43,Ures,Norte America,Mexico,Sonora,Dolar Americano,29.426122125187,-110.386123630726
+44,Ciudad del Vaticano,Europa,Vaticano,Vaticano,Euro,41.902375447280,12.454266822310
